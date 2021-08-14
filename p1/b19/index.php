@@ -1,0 +1,8 @@
+<?php
+define('ORDER_STATUS_NEW', 1);
+define('ORDER_STATUS_APPROVED', 2);
+define('ORDER_STATUS_DONE', 3);
+
+var_dump(ORDER_STATUS_NEW);
+var_dump(ORDER_STATUS_APPROVED);
+var_dump(ORDER_STATUS_DONE);
