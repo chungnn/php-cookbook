@@ -13,6 +13,9 @@ class Application {
             case 'register':
                 $controller->add();
                 break;
+            case 'save':
+                $controller->save();
+                break;
             case 'index':
             default:
                 $controller->index();

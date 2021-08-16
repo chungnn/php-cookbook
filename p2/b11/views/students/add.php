@@ -6,7 +6,7 @@
 	<body>
 		<h3>Đăng ký học</h3>
         <a href="index.php">Về trang danh sách</a> <br /><br />
-        <form action="" method="post">
+        <form action="index.php?a=save" method="post">
             <table>
                 <tr>
                     <td>Họ tên: </td>
