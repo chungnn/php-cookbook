@@ -12,6 +12,25 @@
 				<td>Tên</td>
 				<td>Các môn đăng ký</td>
 			</tr>
+			<?php 
+                if(count($students) == 0) {
+                ?>
+                    <tr>
+                        <td colspan=3>Chưa có dữ liệu</td>
+                    </tr>
+                <?php 
+                } else {
+                    $i = 1;
+                    foreach($students as $student) { 
+                    ?>
+                    <tr>
+                        <td><?php echo $i++;?></td>
+                        <td><?php echo $student->getName();?></td>
+                        <td><?php echo $student->getSubjects();?></td>
+                    </tr>
+                    <?php }
+                }
+			?>
 		</table>
 	</body>
 </html>
