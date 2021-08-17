@@ -6,6 +6,11 @@
 	<body>
 		<h2>Danh sách đăng kí học</h2>
         <a href="index.php?a=register">Đăng ký tại đây</a> <br /><br />
+        <?php 
+            if($flashMsg != "") {
+                echo "<h3 style='color:red;'>".$flashMsg."</h3>"; // hiển thị
+            }
+        ?>
 		<table border="1" cellspacing="0" cellpadding="0">
 			<tr>
 				<td>STT</td>

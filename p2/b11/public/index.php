@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 define('DS', DIRECTORY_SEPARATOR);
 define('APP_DIR', dirname(dirname(__FILE__))); // chú ý dòng này có thay đổi nhé.
 
