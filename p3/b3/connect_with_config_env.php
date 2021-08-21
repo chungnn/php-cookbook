@@ -4,10 +4,10 @@ require_once "vendor/autoload.php";
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$host = getenv("DB_HOST");
-$username = getenv("DB_USERNAME");
-$password = getenv("DB_PASSWORD");
-$dbname = getenv("DB_NAME");
+$host = $_SERVER["DB_HOST"];
+$username = $_SERVER["DB_USERNAME"];
+$password = $_SERVER["DB_PASSWORD"];
+$dbname = $_SERVER["DB_NAME"];
 
 try {
   $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
