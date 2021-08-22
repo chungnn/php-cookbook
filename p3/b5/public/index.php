@@ -13,9 +13,8 @@ class Application {
     public function run() {
         $dotenv = Dotenv\Dotenv::createImmutable(APP_DIR);
         $dotenv->load();
-        $db = new Database();
         $sql = 'SELECT * FROM products ORDER BY id DESC';
-        $result = $db->getConnection()->query($sql, PDO::FETCH_ASSOC);
+        $result = Database::getConnection()->query($sql, PDO::FETCH_ASSOC);
         echo "<pre>";
         foreach ( $result as $row) {
             var_dump($row);

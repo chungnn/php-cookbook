@@ -4,7 +4,9 @@ class Database {
     
     private $conn;
     
-    public function __construct() {
+    private static $instance;
+    
+    private function __construct() {
         $host = $_SERVER["DB_HOST"];
         $username = $_SERVER["DB_USERNAME"];
         $password = $_SERVER["DB_PASSWORD"];
@@ -16,7 +18,12 @@ class Database {
     }
     
     public function getConnection() {
-        return $this->conn;
+        
+        if(self::$instance == null) {
+            self::$instance = new static();
+        }
+        
+        return self::$instance->conn;
     }
     
 }
