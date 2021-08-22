@@ -17,7 +17,7 @@ class Database {
         $this->conn->exec("SET NAMES utf8");
     }
     
-    public function getConnection() {
+    public static function getConnection() {
         
         if(self::$instance == null) {
             self::$instance = new static();
